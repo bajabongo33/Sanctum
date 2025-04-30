@@ -1,0 +1,75 @@
+/* ====================================================================
+   Eldar Sanctum – main.css (starter)
+   --------------------------------------------------------------------
+   ✔ Zmieniaj kolory / czcionki w zmiennych :root
+   ✔ Dodawaj kolejne sekcje lub utility‑klasy według potrzeb
+   ✔ Plik ładowany po Tailwindzie, więc nadpisuje style frameworka
+   ==================================================================== */
+
+/* --------- Brand variables --------- */
+:root {
+  /* główny kolor akcentu */
+  --primary: #4f46e5;       /* indigo‑600 */
+  --primary-dark: #4338ca;  /* indigo‑700 */
+  --accent: #10b981;        /* emerald‑500 */
+  --bg: #f8fafc;            /* slate‑50 */
+  --text: #0f172a;          /* slate‑900 */
+  --radius: 0.75rem;        /* 12 px */
+}
+
+/* --------- Global reset / base --------- */
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+}
+
+h1,h2,h3,h4{
+  font-weight:700;
+  line-height:1.2;
+  color:var(--primary);
+}
+
+/* --------- Components --------- */
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  padding:0.75rem 1.5rem;
+  border-radius:var(--radius);
+  background:var(--primary);
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  transition:background 0.2s ease-in-out;
+}
+.btn-primary:hover{background:var(--primary-dark)}
+
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow:0 4px 12px rgba(15,23,42,0.1);
+  padding:2rem;
+  transition:transform 0.15s ease;
+}
+.card:hover{transform:translateY(-4px)}
+
+/* --------- Utility helpers --------- */
+.text-center{text-align:center}
+.mt-6{margin-top:1.5rem}
+.mb-8{margin-bottom:2rem}
+
+/* --------- Hero section override (example) --------- */
+#hero{background-image:url("../img/hero-bg.webp");background-size:cover;background-position:center}
+#hero-overlay{backdrop-filter:blur(2px) brightness(0.9)}
+
+/* --------- Footer --------- */
+footer{
+  padding:2rem 0;
+  text-align:center;
+  font-size:0.875rem;
+  color:rgba(15,23,42,0.65);
+}
