@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero
-        image="/hero-tree-xl.webp"
+        image="/hero-tree-sm.webp"
         mobileImage="/hero-tree-sm.webp"
         title="Welcome to Eldar’s Sanctum"
         subtitle="You’ve stepped through the threshold into a living nexus of myth, code, and consciousness."
